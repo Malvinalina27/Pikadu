@@ -1,10 +1,27 @@
+@font-face {
+  font-family: "SFProDisplay-Regular";
+  src: local("SFProDisplay-Regular"),
+       url(../fonts/SFProDisplay-Regular.woff) format("woff"),
+       url(../fonts/SFProDisplay-Regular.woff2) format("woff2");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "SFProDisplay-Semibold";
+  src: local("SFProDisplay-Semibold"),
+       url(../fonts/SFProDisplay-Semibold.woff) format("woff"),
+       url(../fonts/SFProDisplay-Semibold.woff2) format("woff2");
+  font-weight: bold;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'SFProDisplay-Regular', sans-serif;
   background: #F5F5F5;
+  font-style: normal;
+  font-weight: normal;
 }
 
 /* Шапка сайта */
@@ -93,10 +110,13 @@ body {
   max-width: 1200px;
   width: 90%;
   margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .posts {
-  max-width: 800px;  
+  width: 67%;  
 }
 
 /* post */
@@ -115,6 +135,7 @@ body {
 }
 
 .post-title {
+  font-family: "SFProDisplay-Semibold", sans-serif;
   margin-top: 0;
   margin-bottom: 19px;
   font-weight: 600;
@@ -206,4 +227,177 @@ body {
   height: 34px;
   margin: 9px;
   border-radius: 4px;
+}
+
+/* aside */
+
+.sidebar {
+  width: 31%;
+  
+}
+
+.user {
+  background: #FAFAFA;
+  border: 1px solid #E8E8E8;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+}
+
+.user-avatar {
+  border-radius: 50px;
+  margin-right: 15px;
+}
+
+.user-name {
+  font-family: "SFProDisplay-Semibold", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+}
+
+.icon-exit {
+  width: 20px;
+  height: 20px;
+  fill: #000000;
+}
+
+/* Sidebar-navigation */
+
+.sidebar-nav {
+  background-color: #ffffff;
+}
+
+.sidebar-menu {
+  margin: 0;
+  border: 1px solid #E8E8E8;
+  border-top: none;
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu-link {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 22px;
+  color: #595959;
+  background-color: #FFFFFF;
+  display: inline-block;
+  padding: 16px 48px;
+  width: 100%;
+}
+
+.sidebar-menu-link:hover {
+  background: #FFFBE6;
+  color: #FAAD14;
+}
+
+.sidebar-menu-link.active {
+  background: #FFFBE6;
+  color: #FAAD14;
+  border-right: 3px solid #FAAD14;
+}
+
+/* Опубликовать */
+
+.button {
+  background: #FAAD14;
+  border-radius: 4px;  
+  font-size: 16px;
+  line-height: 24px;
+  padding: 13px;
+}
+
+.button-new-post {
+  width: 100%;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+
+.icon-fire {
+  fill: #fff;
+  width: 11px;
+  height: 13px;
+  margin-right: 10px;
+}
+
+/* Комментарий дня */
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  margin-top: 20px;
+}
+
+.card-header {
+  background: #FAFAFA;
+  border-bottom: 1px solid #E8E8E8;
+  padding: 23px 25px;
+}
+
+.card-title {
+  margin: 0;
+  color: #595959;
+  font-family: "SFProDisplay-Semibold", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.card-body {
+  padding: 22px 40px 20px 25px;
+}
+
+.card-body-title {
+  margin: 0;
+  font-family: "SFProDisplay-Semibold", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #D48806;
+  text-decoration: none;
+  margin: 0 0 10px;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 22px;
+  color: #262626;
+  margin: 10px 0;
+}
+
+/* Реклама */
+
+.ad {
+  display: block;  
+  background: #fff url('../img/promo.jpg') no-repeat center / cover;
+  width: 100%;
+  height: 260px;
+  border: 1px solid #E8E8E8;
+  margin-top: 20px;
+  position: relative;
+}
+
+.ad::before {
+  content: 'Реклама';
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #C4C4C4;
+  padding-left: 26px;
+  padding-right: 26px;
+  color: #FFFFFF;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
 }
