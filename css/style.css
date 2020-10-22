@@ -4,12 +4,17 @@
 
 body {
   font-family: sans-serif;
+  background: #F5F5F5;
 }
+
+/* Шапка сайта */
 
 .header {
   background: #FA8C16;
   padding-top: 16px;
   padding-bottom: 16px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
 }
 
 .header-wrapper {
@@ -80,3 +85,125 @@ body {
 .search-input:-ms-input-placeholder { color: #BFBFBF; }
 .search-input::-ms-input-placeholder { color: #BFBFBF;}
 .search-input::placeholder { color: #BFBFBF; } 
+
+
+/* Контент */
+
+.content {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.posts {
+  max-width: 800px;  
+}
+
+/* post */
+
+.post {
+  background-color: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  margin-bottom: 30px;
+}
+
+.post-body {
+  padding-top: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 0;
+}
+
+.post-title {
+  margin-top: 0;
+  margin-bottom: 19px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;  
+}
+
+.post-text {
+  color: #262626;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* tags */
+
+.tags {
+  margin-bottom: 22px;
+}
+
+.tag {
+  color: #BFBFBF;
+  font-size: 14px;
+  line-height: 22px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+/* post-footer */
+
+.post-footer {
+  background: #FAFAFA;
+  border-top: 1px solid #E8E8E8;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.post-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.post-button {
+  background-color: transparent;
+  border: none;
+  color: #8C8C8C;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 22px;
+  margin-right: 19px;
+  cursor: pointer;
+}
+
+.post-button .icon {
+  fill: #8C8C8C;
+}
+
+.icon-like,
+.icon-comments {
+  margin-right: 6px;
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+.author-username {
+  display: block;
+  color: #8C8C8C;
+  font-size: 12px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.post-time {
+  font-size: 12px;
+  line-height: 20px;
+  color: #BFBFBF;
+}
+
+.author-avatar {
+  width: 34px;
+  height: 34px;
+  margin: 9px;
+  border-radius: 4px;
+}
